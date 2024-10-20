@@ -1,0 +1,40 @@
+﻿body {
+    
+    font-family: 'Arial', sans-serif;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.form-group label {
+    font-weight: bold;
+    border: 2px solid #f8f8f8;
+    color: black;
+    background-color: #f8f8f8;
+    padding: 5px 10px;
+    display: inline-block;
+    /*margin-bottom: 10px;*/ /* Başlık ile input arasında boşluk */
+}
+
+
+
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px; /* Elemanlar arasında boşluk ekler */
+}
+
+.form-group {
+    margin-bottom: 15px;
+    flex-basis: calc(50% - 15px); /* İki elemanın yan yana gelmesini sağlar */
+    max-width: calc(50% - 15px);
+}
+
+@media (max-width: 768px) {
+    .form-group {
+        flex-basis: calc(100% - 15px); /* Küçük ekranlarda tek sütun yapar */
+        max-width: calc(100% - 15px);
+    }
+}

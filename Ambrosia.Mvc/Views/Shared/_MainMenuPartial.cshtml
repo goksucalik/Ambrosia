@@ -1,0 +1,22 @@
+﻿@using Microsoft.Extensions.Options
+@using Ambrosia.Entities.Concrete
+@inject IOptions<WebSiteInfo> WebSiteInfo
+@{
+	var webSiteInfo = WebSiteInfo.Value;
+}
+
+@{
+    var currentAction = ViewContext.RouteData.Values["action"]?.ToString();
+    var currentController = ViewContext.RouteData.Values["controller"]?.ToString();
+}
+
+<nav>
+    <a asp-controller="Home" asp-action="Index" class="@(currentController == "Home" && currentAction == "Index" ? "active" : "")">@webSiteInfo.MenuTitle</a>
+    <a asp-controller="Home" asp-action="About" class="@(currentController == "Home" && currentAction == "About" ? "active" : "")">Hakkımızda</a>
+    <a asp-controller="Product" asp-action="Index" class="@(currentController == "Product" && currentAction == "Index" ? "active" : "")">Menü</a>
+    <a asp-controller="Home" asp-action="Contact" class="@(currentController == "Home" && currentAction == "Contact" ? "active" : "")">İletişim</a>
+    <a asp-area="Admin" asp-controller="Home" asp-action="Index" class="@(currentController == "Home" && currentAction == "Index" && ViewContext.RouteData.Values["area"]?.ToString() == "Admin" ? "active" : "")">Yönetim Paneli</a>
+    <a asp-controller="Home" asp-action="Basket">
+        <img src="https://img.icons8.com/glyph-neue/20/null/shopping-cart.png" alt="sepet" />
+    </a>
+</nav>

@@ -1,0 +1,52 @@
+﻿@model Ambrosia.Entities.Dtos.EmailSendDto
+@{
+    Layout = "_ContactLayout";
+    ViewBag.Title = "İletişim";
+    ViewBag.Author = "Ambrosia";
+    ViewBag.Description = "Bizimle iletişime geçin ve sağlıklı ürünlerimiz hakkında daha fazla bilgi edinin.";
+    ViewBag.Tags = "Ambrosia, Sağlıklı Ürünler, İletişim, Bizimle İletişime Geçin, Sağlıklı Yaşam";
+
+}
+
+<!-- Footer -->
+<section id="footer">
+    <div class="inner">
+        <h2 class="major">Bizimle İletişime Geçin</h2>
+        <p>Öneri, geri bildirim veya menümüze eklenmesini istediğiniz bir ürün hakkında bizimle iletişime geçmekten çekinmeyin. Ambrosia ailesi olarak, siz değerli müşterilerimizin görüşlerine büyük önem veriyoruz.</p>
+        <form asp-controller="Home" asp-action="Contact" method="post">
+            <div class="fields">
+                <div class="field">
+                    <label for="name">İsminiz</label>
+                    <input type="text" id="name" asp-for="Name" />
+                </div>
+                <div class="field">
+                    <label for="email">E-Posta adresiniz</label>
+                    <input type="email" id="email" asp-for="Email" />
+                </div>
+                <div class="field">
+                    <label for="message">Mesajınız...</label>
+                    <textarea id="message" asp-for="Message" rows="2"></textarea>
+                </div>
+            </div>
+            <ul class="actions">
+                <li><input type="submit" value="Gönder" /></li>
+            </ul>
+
+        </form>
+
+        <ul class="contact">
+            <li class="icon solid fa-home">
+                Ambrosia Restaurant<br />
+                Lezzet Caddesi 1400. Sokak<br />
+                Ankara, Türkiye 06000
+            </li>
+            <li class="icon solid fa-phone">(000) 000-0000</li>
+            <li class="icon brands fa-twitter"><a href="https://twitter.com/AmbrosiaDünyası" target="_blank">twitter.com/AmbrosiaDünyası</a></li>
+            <li class="icon brands fa-facebook-f"><a href="https://facebook.com/AmbrosiaDunyasi" target="_blank">facebook.com/AmbrosiaDunyasi</a></li>
+            <li class="icon brands fa-instagram"><a href="https://instagram.com/AmbrosiaDunyasi" target="_blank">instagram.com/AmbrosiaDunyasi</a></li>
+        </ul>
+        <ul class="copyright">
+            <li>Tüm Hakları Saklıdır &copy; Ambrosia 2024</li>
+        </ul>
+    </div>
+</section>

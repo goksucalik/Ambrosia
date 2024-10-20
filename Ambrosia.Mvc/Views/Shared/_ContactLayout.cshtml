@@ -1,0 +1,34 @@
+﻿<!DOCTYPE HTML>
+<html lang="tr">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<meta name="description" content="@ViewBag.Description">
+	<meta name="author" content="@ViewBag.Author">
+	<meta name="keywords" content="@ViewBag.Tags" />
+	<title>@ViewBag.Title | Ambrosia</title>
+	<link rel="stylesheet" href="~/BlogHome/assets/css/main.css" />
+	<link rel="stylesheet" href="~/BlogHome/assets/css/blogSite.css" />
+	<link href="~/BlogHome/assets/css/fontawesome-all.min.css" rel="stylesheet" />
+	<noscript><link rel="stylesheet" href="~/BlogHome/assets/css/noscript.css" /></noscript>
+</head>
+<body class="is-preload">
+
+    <!-- Page Wrapper -->
+    <div id="page-wrapper">
+        <partial name="_MainMenuPartial" />
+        @RenderBody()
+    </div>
+
+    <!-- Scripts -->
+    <script src="~/BlogHome/assets/js/jquery.min.js"></script>
+    <script src="~/BlogHome/assets/js/jquery.scrollex.min.js"></script>
+    <script src="~/BlogHome/assets/js/browser.min.js"></script>
+    <script src="~/BlogHome/assets/js/breakpoints.min.js"></script>
+    <script src="~/BlogHome/assets/js/util.js"></script>
+    <script src="~/BlogHome/assets/js/main.js"></script>
+    <script src="~/BlogHome/assets/js/blogSite.js"></script>
+    @await RenderSectionAsync("Scripts", false)
+    @await Component.InvokeAsync("NToastNotify")
+</body>
+</html>

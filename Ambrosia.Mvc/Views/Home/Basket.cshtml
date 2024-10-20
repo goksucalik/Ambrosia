@@ -1,0 +1,105 @@
+﻿@model Ambrosia.Entities.Dtos.EmailSendDto
+@{
+    Layout = "_Layout";
+    ViewBag.Title = "Sepet";
+    ViewBag.Author = "Ambrosia";
+    ViewBag.Description = "Bizimle iletişime geçin ve sağlıklı ürünlerimiz hakkında daha fazla bilgi edinin.";
+    ViewBag.Tags = "Ambrosia, Sağlıklı Ürünler, İletişim, Bizimle İletişime Geçin, Sağlıklı Yaşam";
+
+}
+
+<!-- Footer -->
+<section class="basket">
+    <div class="container">
+        <div class="basket-page-wrapper">
+            <form class="basket-form">
+                <div class="free-progress-bar">
+                    <p class="progress-bar-title">
+                        Sepetinize <strong>20₺</strong> lık ürün daha eklerseniz kargo bedava!
+                    </p>
+                    <div class="progress-bar">
+                        <span class="progress"></span>
+                    </div>
+                </div>
+                <div class="shop-table-wrapper">
+                    <table class="shop-table">
+                        <thead>
+                            <tr>
+                                <th class="product-img"> </th>
+                                <th class="product-title">Ürün</th>
+                                <th class="product-price">Fiyat</th>
+                                <th class="product-quantity">Adet</th>
+                                <th class="product-subtotal">Toplam</th>
+                            </tr>
+                        </thead>
+                        <tbody class="basket-wrapper">
+                            <tr class="basket-item">
+                                <td class="basket-img">
+                                    <img src="images/food1.png" alt="Fit Salata" />
+                                    <i class="bi bi-x delete-cart"></i>
+                                </td>
+                                <td>Fit Salata</td>
+                                <td>75₺</td>
+                                <td>1</td>
+                                <td>75₺</td>
+                            </tr>
+                            <tr class="basket-item">
+                                <td class="basket-img">
+                                    <img src="images/food1.png" alt="Fit Salata" />
+                                    <i class="bi bi-x delete-cart"></i>
+                                </td>
+                                <td>Fit Salata</td>
+                                <td>75₺</td>
+                                <td>1</td>
+                                <td>75₺</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="actions-wrapper">
+                        <div class="coupon">
+                            <input type="text" class="input-text" placeholder="Kupon" />
+                            <button class="btn">Kuponu Uygula</button>
+                        </div>
+                        <div class="update-basket">
+                            <button class="btn">Sepeti Güncelle</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <div class="basket-collaterals">
+                <div class="basket-totals">
+                    <h2>Toplam</h2>
+                    <table>
+                        <tbody>
+                            <tr class="basket-subtotal">
+                                <th>Sepet Toplam</th>
+                                <td><span id="subtotal">150₺</span></td>
+                            </tr>
+                            <tr>
+                                <th>Kargo</th>
+                                <td>
+                                    <ul>
+                                        <li>
+                                            <label>
+                                                Hızlı Kargo: 15₺
+                                                <input type="checkbox" />
+                                            </label>
+                                        </li>
+                                        <a href="#">Adres Güncelle</a>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Toplam</th>
+                                <td><strong>170.00₺</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="checkout">
+                        <button class="btn btn-lg">Sipariş Ver</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

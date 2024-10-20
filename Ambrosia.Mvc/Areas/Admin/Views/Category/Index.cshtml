@@ -1,0 +1,91 @@
+﻿@using Ambrosia.Shared.Utilities.Results.ComplexTypes
+@model Ambrosia.Entities.Dtos.CategoryListDto
+@{
+    Layout = "_Layout";
+    ViewBag.Title = "Kategoriler Index";
+}
+<ol class="breadcrumb mb-3 mt-2">
+    <li class="breadcrumb-item"><a asp-area="Admin" asp-controller="Home" asp-action="Index">Admin</a></li>
+    <li class="breadcrumb-item active"><a asp-area="Admin" asp-controller="Category" asp-action="Index">Kategoriler</a></li>
+</ol>
+@if (Model.ResultStatus == ResultStatus.Success)
+{
+    <div id="modalPlaceHolder" aria-hidden="true"></div>
+    <div class="card mb-4 mt-2">
+        <div class="card-header">
+            <i class="fas fa-table me-1"></i>
+            Kategoriler
+        </div>
+        <div class="spinner-grow text-dark" role="status" style="display:none">
+            <span class="visually-hidden">Yükleniyor...</span>
+        </div>
+        <div class="card-body">
+            <div class="spinner-border text-primary" role="status" style="display:none">
+                <span class="visually-hidden">Yükleniyor...</span>
+            </div>
+            <table class="table table-bordered small border-2" id="categoriesTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Adı</th>
+                        <th>Açıklaması</th>
+                        <th>Aktif Mi?</th>
+                        <th>Silinmiş Mi?</th>
+                        <th>Oluşturulma Tarihi</th>
+                        <th>Oluşturan Kullanıcı Adı</th>
+                        <th>Son Düzenlenme Tarihi</th>
+                        <th>Son Düzenleyen Kullanıcı Adı</th>
+                        <th>İşlemler</th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <th>ID</th>
+                        <th>Adı</th>
+                        <th>Açıklaması</th>
+                        <th>Aktif Mi?</th>
+                        <th>Silinmiş Mi?</th>
+                        <th>Oluşturulma Tarihi</th>
+                        <th>Oluşturan Kullanıcı Adı</th>
+                        <th>Son Düzenlenme Tarihi</th>
+                        <th>Son Düzenleyen Kullanıcı Adı</th>
+                        <th>İşlemler</th>
+                    </tr>
+                </tfoot>
+                <tbody>
+                    @foreach (var category in Model.Categories)
+                    {
+                        <tr name="@category.Id">
+                            <td>@category.Id</td>
+                            <td>@category.Name</td>
+                            <td>@category.Description</td>
+                            <td>@(category.IsActive ? "Evet" : "Hayır")</td>
+                            <td>@(category.IsDeleted ? "Evet" : "Hayır")</td>
+                            <td>@category.CreatedDate.ToShortDateString()</td>
+                            <td>@category.CreatedName</td>
+                            <td>@category.ModifiedDate.ToShortDateString()</td>
+                            <td>@category.ModifiedName</td>
+                            <td>
+                                <button class="btn btn-primary btn-update btn-sm" data-id="@category.Id"><span class="fas fa-edit"></span></button>
+                                <button class="btn btn-danger btn-delete btn-sm" data-id="@category.Id"><span class="fas fa-minus-circle"></span></button>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+}
+@if (Model.ResultStatus == ResultStatus.Error)
+{
+    <div class="alert alert-danger mt-3">
+        @Model.Message <br />
+        Dashboard sayfasına geri dönmek için lütfen <a class="alert-link" asp-area="Admin" asp-controller="Home" asp-action="Index">tıklayınız</a>
+    </div>
+}
+@section Scripts
+{
+    <script src="~/AdminLTE/js/categoryIndex.js" type="application/ecmascript">
+
+    </script>
+}

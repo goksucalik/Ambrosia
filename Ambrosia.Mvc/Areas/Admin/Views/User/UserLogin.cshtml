@@ -1,0 +1,66 @@
+﻿@model Ambrosia.Entities.Dtos.UserLoginDto
+@{
+    Layout = "_UserLoginLayout";
+    ViewBag.Title = "Giriş Yap";
+}
+<form asp-controller="User" asp-action="Login" method="post">
+    <div asp-validation-summary="All" class="text-danger"></div>
+    <section class="userLogin">
+        <div class="cont">
+            <div class="form sign-in">
+                <h3 class="welcome">Hoş Geldiniz</h3>
+                <label>
+                    <span asp-for="Email">Email</span>
+                    <input type="email" name="email" asp-for="Email">
+                </label>
+                <label>
+                    <span asp-for="Password">Şifre</span>
+                    <input type="password" name="password" asp-for="Password">
+                </label>
+                <span class="custom-control custom-checkbox">
+                    <input class="custom-control-input remember-me" asp-for="RememberMe" type="checkbox" />
+                    <label class="custom-control-label remember-me" asp-for="RememberMe"></label>
+                </span>
+                <button class="submit" type="submit">Giriş Yap</button>
+                <p class="forgot-pass">Şifrenizi mi unuttunuz?</p>
+            </div>
+
+            <div class="sub-cont">
+                <div class="img">
+                    <div class="img-text m-up">
+                        <h2>Kayıt Ol</h2>
+                        <p>Ambrosia ailesine katılmak ister misin?</p>
+                    </div>
+                    <div class="img-text m-in">
+                        <h2>Zaten Üye misin?</h2>
+                        <p>Halihazırda bir hesabınız varsa oturum açın. Sizi özledik!</p>
+                    </div>
+                    <div class="img-btn">
+                        <span class="m-up">Kayıt Ol</span>
+                        <span class="m-in">Giriş Yap</span>
+                    </div>
+                </div>
+                <div class="form sign-up">
+                    <h2 class="welcome">Aramıza Hoş Geldin</h2>
+                    <label>
+                        <span>Ad</span>
+                        <input type="text">
+                    </label>
+                    <label>
+                        <span>Email</span>
+                        <input type="email">
+                    </label>
+                    <label>
+                        <span>Şifre</span>
+                        <input type="password">
+                    </label>
+                    <label>
+                        <span>Şifre Tekrarı</span>
+                        <input type="password">
+                    </label>
+                    <button type="button" class="submit">Şimdi Kayıt Ol</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    </form>

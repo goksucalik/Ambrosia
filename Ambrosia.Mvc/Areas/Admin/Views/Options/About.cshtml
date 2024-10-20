@@ -1,0 +1,78 @@
+﻿@model Ambrosia.Entities.Concrete.AboutUsPageInfo
+@{
+    Layout = "_Layout";
+    ViewBag.Title = "Hakkımızda Sayfa İçerikleri";
+}
+<head>
+    <link rel="stylesheet" href="~/AdminLTE/css/options.css">
+</head>
+<div class="row">
+    <div class="col-lg-8 offset-lg-2">
+        <div class="card mt-1 mb-1">
+            <div class="card-header">
+                <h4 class="text-center"><span class="fas fa-edit"></span> Hakkımızda Sayfa İçerikleri</h4>
+            </div>
+            <div class="card-body">
+                <form asp-controller="Options" asp-action="About" method="post" id="form-aboutuspageinfo-update">
+                    <div asp-validation-summary="All" class="text-danger" id="validation-summary"></div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label asp-for="Header"></label>
+                            <input class="form-control" asp-for="Header" placeholder="Lütfen, ana başlık bilgisini giriniz." />
+                            <span class="text-danger" asp-validation-for="Header"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="IntroHeader"></label>
+                            <input class="form-control" asp-for="IntroHeader" placeholder="Lütfen, giriş bölümü başlığını giriniz." />
+                            <span class="text-danger" asp-validation-for="IntroHeader"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="IntroContent"></label>
+                            <textarea class="form-control" asp-for="IntroContent" placeholder="Lütfen, giriş bölümü içeriğini giriniz." rows="4"></textarea>
+                            <span class="text-danger" asp-validation-for="IntroContent"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="VisionHeader"></label>
+                            <input class="form-control" asp-for="VisionHeader" placeholder="Lütfen, vizyon bölümü başlığını giriniz." />
+                            <span class="text-danger" asp-validation-for="VisionHeader"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="VisionContent"></label>
+                            <textarea class="form-control" asp-for="VisionContent" placeholder="Lütfen, vizyon bölümü içeriğini giriniz." rows="4"></textarea>
+                            <span class="text-danger" asp-validation-for="VisionContent"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="MissionHeader"></label>
+                            <input class="form-control" asp-for="MissionHeader" placeholder="Lütfen, misyon bölümü başlığını giriniz." />
+                            <span class="text-danger" asp-validation-for="MissionHeader"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="MissionContent"></label>
+                            <textarea class="form-control" asp-for="MissionContent" placeholder="Lütfen, misyon bölümü içeriğini giriniz." rows="4"></textarea>
+                            <span class="text-danger" asp-validation-for="MissionContent"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="SeoDescription"></label>
+                            <input type="text" class="form-control" asp-for="SeoDescription" placeholder="Lütfen, SEO açıklama bilgisini giriniz." />
+                            <span class="text-danger" asp-validation-for="SeoDescription"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="SeoTags"></label>
+                            <input type="text" class="form-control" asp-for="SeoTags" placeholder="Lütfen, SEO etiket bilgilerini giriniz." />
+                            <span class="text-danger" asp-validation-for="SeoTags"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="SeoAuthor"></label>
+                            <input type="text" class="form-control" asp-for="SeoAuthor" placeholder="Lütfen, SEO yazar bilgisini giriniz." />
+                            <span class="text-danger" asp-validation-for="SeoAuthor"></span>
+                        </div>
+                        <div class="form-group text-center">
+                            <button type="submit" class="btn btn-primary"><span class="fas fa-save"></span> Kaydet</button>
+                            <a class="btn btn-danger" asp-area="Admin" asp-controller="Home" asp-action="Index"><span class="fas fa-times"></span> İptal</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

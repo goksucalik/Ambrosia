@@ -1,0 +1,41 @@
+﻿@using Microsoft.Extensions.Options
+@using Ambrosia.Entities.Concrete
+@inject IOptionsSnapshot<WebSiteInfo> WebsiteInfo
+@{
+    var websiteInfo = WebsiteInfo.Value;
+}
+
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="description" content="@websiteInfo.SeoDescription">
+    <meta name="author" content="@websiteInfo.SeoAuthor">
+    <meta name="keywords" content="@websiteInfo.SeoTags" />
+    <title>@ViewBag.Title | @websiteInfo.Title</title>
+    <link rel="stylesheet" href="~/BlogHome/assets/css/main.css" />
+    <link rel="stylesheet" href="~/BlogHome/assets/css/blogSite.css" />
+    <link rel="stylesheet" href="~/AdminLTE/css/userLogin.css" />
+    <noscript><link rel="stylesheet" href="~/BlogHome/assets/css/noscript.css" /></noscript>
+</head>
+<body class="is-preload">
+
+    <!-- Page Wrapper -->
+    <div id="page-wrapper">
+        <partial name="_MainMenuPartial" />
+        @RenderBody()
+    </div>
+
+    <!-- Scripts -->
+    <script src="~/BlogHome/assets/js/jquery.min.js"></script>
+    <script src="~/BlogHome/assets/js/jquery.scrollex.min.js"></script>
+    <script src="~/BlogHome/assets/js/browser.min.js"></script>
+    <script src="~/BlogHome/assets/js/breakpoints.min.js"></script>
+    <script src="~/BlogHome/assets/js/util.js"></script>
+    <script src="~/BlogHome/assets/js/main.js"></script>
+    <script src="~/BlogHome/assets/js/blogSite.js"></script>
+    <script src="~/AdminLTE/js/userLogin.js"></script>
+    @await RenderSectionAsync("Scripts", false)
+</body>
+</html>

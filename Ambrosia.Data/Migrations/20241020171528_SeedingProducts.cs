@@ -1,0 +1,40 @@
+﻿using Microsoft.EntityFrameworkCore.Migrations;
+
+#nullable disable
+
+namespace Ambrosia.Data.Migrations
+{
+    /// <inheritdoc />
+    public partial class SeedingProducts : Migration
+    {
+        /// <inheritdoc />
+        protected override void Up(MigrationBuilder migrationBuilder)
+        {
+            migrationBuilder.Sql(
+        "INSERT INTO [Ambrosia].dbo.Products (Name,[Content],Price,Thumbnail,[CreatedDate],CreatedName,ModifiedDate,ModifiedName,IsActive,IsDeleted,UserId,CategoryId,SeoAuthor,SeoDescription,SeoTags,CommentCount) VALUES ('Hawaii Somon Poke Kasesi','Bu taze ve besleyici kase, sağlıklı bir öğün arayanlar için mükemmel bir seçimdir. Somon, avokado, kırmızı lahana, salatalık, ananas ve susam tohumları ile dolu bu kase, hem gözünüze hem de damak zevkinize hitap eder.','182','BlogHome/images/food/Somon.png',GETDATE(),'Migration',GETDATE(),'Migration',1,0,1,1,'Ambrosia Ekibi','Doğal ve besleyici malzemelerle hazırlanan sağlıklı salatalar, tatlılar ve içecekler. Taze ve lezzetli seçeneklerle sağlıklı beslenmenin keyfini çıkarın.','Sağlıklı salatalar, taze salatalar, şekersiz tatlılar, doğal içecekler, sağlıklı beslenme',0)");
+            migrationBuilder.Sql(
+            "INSERT INTO [Ambrosia].dbo.Products (Name,[Content],Price,Thumbnail,[CreatedDate],CreatedName,ModifiedDate,ModifiedName,IsActive,IsDeleted,UserId,CategoryId,SeoAuthor,SeoDescription,SeoTags,CommentCount) VALUES ('Tropikal Tavuklu Quinoa Kasesi',' İçerisindeki mango, tavuk, quinoa ve çeşitli sebzelerle hem besleyici hem de göz alıcı bir öğün sunuyor.','240','BlogHome/images/food/Tavuk.png',GETDATE(),'Migration',GETDATE(),'Migration',1,0,1,1,'Ambrosia Ekibi','Doğal ve besleyici malzemelerle hazırlanan sağlıklı salatalar, tatlılar ve içecekler. Taze ve lezzetli seçeneklerle sağlıklı beslenmenin keyfini çıkarın.','Sağlıklı salatalar, taze salatalar, şekersiz tatlılar, doğal içecekler, sağlıklı beslenme',0)");
+            migrationBuilder.Sql(
+            "INSERT INTO [Ambrosia].dbo.Products (Name,[Content],Price,Thumbnail,[CreatedDate],CreatedName,ModifiedDate,ModifiedName,IsActive,IsDeleted,UserId,CategoryId,SeoAuthor,SeoDescription,SeoTags,CommentCount) VALUES ('Tropikal Bowl Kasesi','Bu taze ve besleyici kase, sağlıklı bir öğün arayanlar için mükemmel bir seçimdir. Yeşil smoothie tabanı, çilek dilimleri, kabak çekirdeği, granola, mango küpleri, hindistan cevizi rendesi ve kivi parçaları ile dolu bu kase, hem gözünüze hem de damak zevkinize hitap eder.','190','BlogHome/images/food/Bowl.png',GETDATE(),'Migration',GETDATE(),'Migration',1,0,1,1,'Ambrosia Ekibi','Doğal ve besleyici malzemelerle hazırlanan sağlıklı salatalar, tatlılar ve içecekler. Taze ve lezzetli seçeneklerle sağlıklı beslenmenin keyfini çıkarın.','Sağlıklı salatalar, taze salatalar, şekersiz tatlılar, doğal içecekler, sağlıklı beslenme',0)");
+            migrationBuilder.Sql(
+            "INSERT INTO [Ambrosia].dbo.Products (Name,[Content],Price,Thumbnail,[CreatedDate],CreatedName,ModifiedDate,ModifiedName,IsActive,IsDeleted,UserId,CategoryId,SeoAuthor,SeoDescription,SeoTags,CommentCount) VALUES ('VitPortakal','Bu taze ve besleyici içecek, sağlıklı bir yaşam tarzını benimseyenler için mükemmel bir seçimdir. Muz, üzüm, çilek, elma ve portakalın mükemmel uyumuyla hazırlanan VitPortakal, hem ferahlatıcı hem de vitamin deposudur.','120','BlogHome/images/food/VitPortakal.png',GETDATE(),'Migration',GETDATE(),'Migration',1,0,1,2,'Ambrosia Ekibi','Doğal ve besleyici malzemelerle hazırlanan VitPortakal, sağlıklı bir yaşam tarzını benimseyenler için mükemmel bir seçimdir. Ferahlatıcı ve vitamin deposu.','Sağlıklı içecekler, doğal içecekler, vitamin deposu, ferahlatıcı içecekler, tropikal içecekler',0)");
+            migrationBuilder.Sql(
+           "INSERT INTO [Ambrosia].dbo.Products (Name,[Content],Price,Thumbnail,[CreatedDate],CreatedName,ModifiedDate,ModifiedName,IsActive,IsDeleted,UserId,CategoryId,SeoAuthor,SeoDescription,SeoTags,CommentCount) VALUES ('VitMango','Hindistan cevizi, mango, ananas, süt ve fıstık ezmesi gibi doğal ve lezzetli malzemelerle hazırlanan VitMango, hem ferahlatıcı hem de vitamin deposudur. Günün her saatinde enerji dolu hissetmek için ideal bir tercihtir','120','BlogHome/images/food/VitMango.png',GETDATE(),'Migration',GETDATE(),'Migration',1,0,1,2,'Ambrosia Ekibi','Doğal ve besleyici malzemelerle hazırlanan VitMango, sağlıklı bir yaşam tarzını benimseyenler için mükemmel bir seçimdir. Ferahlatıcı ve vitamin deposu.','Sağlıklı içecekler, doğal içecekler, vitamin deposu, ferahlatıcı içecekler, tropikal içecekler',0)");
+            migrationBuilder.Sql(
+           "INSERT INTO [Ambrosia].dbo.Products (Name,[Content],Price,Thumbnail,[CreatedDate],CreatedName,ModifiedDate,ModifiedName,IsActive,IsDeleted,UserId,CategoryId,SeoAuthor,SeoDescription,SeoTags,CommentCount) VALUES ('VitNar','Nar, badem sütü, elma, kivi ve böğürtlen gibi doğal ve lezzetli malzemelerle hazırlanan VitNar, hem ferahlatıcı hem de vitamin deposudur. Günün her saatinde enerji dolu hissetmek için ideal bir tercihtir.','120','BlogHome/images/food/VitNar.png',GETDATE(),'Migration',GETDATE(),'Migration',1,0,1,2,'Ambrosia Ekibi','Doğal ve besleyici malzemelerle hazırlanan VitNar, sağlıklı bir yaşam tarzını benimseyenler için mükemmel bir seçimdir. Ferahlatıcı ve vitamin deposu.','Sağlıklı içecekler, doğal içecekler, vitamin deposu, ferahlatıcı içecekler, nar içecekleri',0)");
+            migrationBuilder.Sql(
+           "INSERT INTO [Ambrosia].dbo.Products (Name,[Content],Price,Thumbnail,[CreatedDate],CreatedName,ModifiedDate,ModifiedName,IsActive,IsDeleted,UserId,CategoryId,SeoAuthor,SeoDescription,SeoTags,CommentCount) VALUES ('Limonlu Tart','Bu nefis Limonlu Çilekli Tart, altın sarısı limon dolgusu ve taze çilek ile yaban mersini süslemesiyle göz kamaştırıyor. Hafif ve ferahlatıcı tadıyla her lokmada damaklarınızı şenlendirecek. Özel günlerinizde veya günlük tatlı kaçamaklarınızda mükemmel bir tercih!','145','BlogHome/images/food/LimonluTart.png',GETDATE(),'Migration',GETDATE(),'Migration',1,0,1,3,'Ambrosia Ekibi','Sağlıklı ve lezzetli Limonlu Çilekli Tart, rafine şeker içermeyen, taze meyvelerle hazırlanan hafif bir tatlıdır. Diyet dostu bu tatlıyı hemen sipariş verin ve ferahlatıcı lezzeti deneyimleyin!','Tatlılar, meyve kaseleri, sağlıklı tatlılar, lezzetli tatlılar',0)");
+            migrationBuilder.Sql(
+           "INSERT INTO [Ambrosia].dbo.Products (Name,[Content],Price,Thumbnail,[CreatedDate],CreatedName,ModifiedDate,ModifiedName,IsActive,IsDeleted,UserId,CategoryId,SeoAuthor,SeoDescription,SeoTags,CommentCount) VALUES ('Tropikal Meyve Kasesi','Portakal-pembe renkli smoothie tabanı, dilimlenmiş kivi, yaban mersini, granola ve kakao parçaları ile süslenmiştir. Hem görsel olarak hem de lezzet olarak tatmin edici olan Tropikal Meyve Kasesi, her öğünün sonunda tatlı bir dokunuş sağlar.','135','BlogHome/images/food/MeyveKasesi.png',GETDATE(),'Migration',GETDATE(),'Migration',1,0,1,3,'Ambrosia Ekibi','Taze kivi, yaban mersini, granola ve kakao parçaları ile süslenmiş, portakal-pembe renkli smoothie tabanlı Tropikal Meyve Kasesi. Görsel ve lezzet şöleni.','Tatlılar, meyve kaseleri, sağlıklı tatlılar, lezzetli tatlılar',0)");
+            migrationBuilder.Sql(
+           "INSERT INTO [Ambrosia].dbo.Products (Name,[Content],Price,Thumbnail,[CreatedDate],CreatedName,ModifiedDate,ModifiedName,IsActive,IsDeleted,UserId,CategoryId,SeoAuthor,SeoDescription,SeoTags,CommentCount) VALUES ('Tropikal Tart','Bu nefis Tropikal Tart, altın sarısı dolgu ve taze meyvelerle süslenmiş. Hafif ve ferahlatıcı tadıyla her lokmada damaklarınızı şenlendirecek.','145','BlogHome/images/food/TropikalTart.png',GETDATE(),'Migration',GETDATE(),'Migration',1,0,1,3,'Ambrosia Ekibi','Sağlıklı ve lezzetli Tropikal Tart, rafine şeker içermeyen, taze meyvelerle hazırlanan hafif bir tatlıdır. Diyet dostu bu tatlıyı hemen sipariş verin ve tropikal lezzetleri deneyimleyin!','Tatlılar, meyve kaseleri, sağlıklı tatlılar, lezzetli tatlılar',0)");
+
+        }
+
+        /// <inheritdoc />
+        protected override void Down(MigrationBuilder migrationBuilder)
+        {
+
+        }
+    }
+}
